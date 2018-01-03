@@ -1,18 +1,27 @@
+<!DOCTYPE html>
 
+<html>
+<!--<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">-->
+<link rel="stylesheet" href="/static/third_party/css/semantic.css">
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="semantic/dist/semantic.min.js"></script>
 
+<body>
+<h2>Click the quote from the book:</h2>
 {% if answerpos == 1 %}
-<!--<a{{ quote }}</p>-->
-<!--<p>{{ chain }}</p>-->
 <a href="/correct">{{ quote }}</a>
 <a href="/wrong">{{ chain }}</a>
 <p>1</p>
 {% endif %}
 {% if answerpos == 2 %}
-<!--<p>{{ chain }}</p>-->
-<!--<p>{{ quote }}</p>-->
 <a href="/wrong">{{ chain }}</a>
 <a href="/correct">{{ quote }}</a>
 <p>2</p>
 {% endif %}
 
-<p>click the quote from the book!</p>
+
+</body>
+</html>

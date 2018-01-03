@@ -1,6 +1,7 @@
 from flask import *  # import Flask
 from makeChain import Chain
 from getQuote import Quote
+import random
 app = Flask(__name__)
 
 @app.route('/')
@@ -15,22 +16,17 @@ def organizeQuiz():
     quote = q.generateQuote()
     chain = c.genereteChain()
 
+    pos = random.randint(1,2)
     #put options in different order and render template
-    return render_template('question.html', quote=quote, chain=chain)
+    return render_template('question.html', quote=quote, chain=chain, answerpos=pos)
 
-# @app.route('/user', methods=['POST','GET'])
-# def findplaces():
-#     username = request.args.get(key='username')
-#
-#
-#     s = userSongs()
-#     names = s.Login(username) #make it so that username is used here instead of other thing
-#
-#     print(username)
-#     print(names)
-#
-#     return render_template("answers.html", names=names)
+@app.route('/correct')
+def serveCorrect():
+    return render_template("correct.html")
 
-#maybe authprize in js? use spotify tuts
+@app.route('/wrong')
+def serveWrong():
+    return render_template("wrong.html")
+
 if __name__ == '__main__':
     app.run()

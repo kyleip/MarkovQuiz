@@ -10,5 +10,8 @@ class Chain:
             text_model = markovify.Text(text)
 
         # print(text_model.make_short_sentence(250,120))
+        sentence = text_model.make_short_sentence(400,140)
+        while(sentence is None):
+            sentence = text_model.make_short_sentence(400, 140)
 
-        return (text_model.make_short_sentence(200,100))
+        return (sentence)

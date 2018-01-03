@@ -12,7 +12,7 @@ class Quote:
 
         sentence = (random.choice(sentences) + ".")
 
-        while (len(sentence)<120):
+        while (len(sentence)<120 or len(sentence)>400):
             sentence = (random.choice(sentences) + ".")
 
     # print (sentence)

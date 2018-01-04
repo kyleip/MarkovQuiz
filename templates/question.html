@@ -10,18 +10,42 @@
 <script src="semantic/dist/semantic.min.js"></script>
 
 <body>
+<div class="ui hidden divider"></div>
 <h2>Click the quote from the book:</h2>
-{% if answerpos == 1 %}
-<a href="/correct">{{ quote }}</a>
-<a href="/wrong">{{ chain }}</a>
-<p>1</p>
-{% endif %}
-{% if answerpos == 2 %}
-<a href="/wrong">{{ chain }}</a>
-<a href="/correct">{{ quote }}</a>
-<p>2</p>
-{% endif %}
 
+<div class="ui container">
+    <div class="ui grid">
+        <!--<div class="ui two column grid" style="text-align: center;">-->
+
+            {% if answerpos == 1 %}
+            <div class="eight wide column">
+                <div class="ui segment">
+                <a href="/correct">{{ quote }}</a>
+                </div>
+            </div>
+            <div class="eight wide column">
+                <div class="ui segment">
+                <a href="/wrong">{{ chain }}</a>
+                </div>
+            </div>
+            <p>1</p>
+            {% endif %}
+            {% if answerpos == 2 %}
+            <div class="eight wide column">
+                <div class="ui segment">
+                <a href="/wrong">{{ chain }} </a>
+                </div>
+            </div>
+            <div class="eight wide column">
+                <div class="ui segment">
+                <a href="/correct">{{ quote }} </a>
+                </div>
+            </div>
+            <p>2</p>
+            {% endif %}
+        <!--</div>-->
+    </div>
+</div>
 
 </body>
 </html>

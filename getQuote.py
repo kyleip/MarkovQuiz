@@ -12,7 +12,7 @@ class Quote:
 
         sentence = (random.choice(sentences) + ".")
 
-        while (len(sentence)<120 or len(sentence)>400):
+        while (len(sentence)<120 or len(sentence)>400 or sentence.find('(')>0 or sentence.find(')')>0 or sentence.find('[')>0):
             sentence = (random.choice(sentences) + ".")
 
     # print (sentence)

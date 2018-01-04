@@ -9,19 +9,33 @@
   crossorigin="anonymous"></script>
 <script src="semantic/dist/semantic.min.js"></script>
 
+<style>
+    p {
+        line-height:.5em;
+    }
+</style>
+
 <head>
     <title>Markov Quiz</title>
 </head>
 
 <body>
 <div class="ui hidden divider"></div>
-<h1>Markov Ulysses Quiz</h1>
-<h5 class="ui horizontal divider header"> - </h5>
-<p>Welcome! This site generates a Markov chain of random words from James Joyce's Ulysses. Take the quiz below
-and see if you can differentiate a real Ulysses passage and the Markov chain!</p>
-
-<a href="/quiz"> Start Quiz</a>
+<h1>Markov Literature Quiz</h1>
+<h5 class="ui divider"> </h5>
+<h3>About:</h3>
+<p>This site will generate two passages: a random sentence from James Joyce's <i>Ulysses</i> and a randomly generated fake sentence.</p>
+<p>The goal of the game is to guess which one is the true passage from the book.</p>
+<p>Read more about it <a href="/about"> here </a>.</p>
 <p></p>
+
+<!--<a href="/quiz"> Start Quiz</a>-->
+<p></p>
+<br>
+<div class="ui center aligned segment">
+    <button id="submitID" class="ui blue basic button"> <a href="/quiz"> Start Quiz</a></button>
+</div>
+
 
 </body>
 </html>

@@ -8,6 +8,10 @@ app = Flask(__name__)
 def hello_world():
     return render_template("index.html") #this is the introduction, instructiosn, and button to start the quiz
 
+@app.route('/about')
+def serveAbout():
+    return render_template("about.html")
+
 @app.route('/quiz')
 def organizeQuiz():
     q = Quote()
